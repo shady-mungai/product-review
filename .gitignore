@@ -43,3 +43,9 @@ jspm_packages
 /log/*
 !/log/.keep
 /tmp
+
+
+
+seeds.rb
+
+Gemfile.lock
