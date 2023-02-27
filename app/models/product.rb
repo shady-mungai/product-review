@@ -8,13 +8,11 @@ class Product < ActiveRecord::Base
 
     end
 
-    # def print_all_review
-    #     #puts "Review for #{name} by #{user.name}:#{review.star_rating}. #{review.comment}"
-    #     pp users
-    #     user_name =  users.each {|user| user[:name] }
-    #     puts user_name
-    # end
-
+     # This should puts in the terminal a string representing each review for this product 
+    def print_all_reviews
+    puts self.reviews.map{|review|"Review for #{review.product.name} by #{review.user.name}: #{review.star_rating}. #{review.comment}"}
+    end
+    
     def average_rating
         reviews.map {|review| review.star_rating }.inject(:+) / reviews.size.to_f
     end
