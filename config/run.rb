@@ -8,6 +8,5 @@ Bundler.require(:default, ENV["RACK_ENV"])
 
 require_all "app/models"
 
-review = Review.first
-puts review
-
+user1 = User.find(70)
+puts user1
